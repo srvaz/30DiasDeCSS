@@ -12,7 +12,12 @@ Gostou da ideia?
 [Clique aqui](https://github.com/MilenaCarecho/30diasDeCSS/issues/1) para participar
 
 * [Dia 01 - Ícone de mídia social em camadas](#day01)
+* [Dia 02 - Switch button](#day02)
 
 ## Desafio dia 01 - Ícones de redes sociais em camadas <a name="day01"></a>
 
 ![Redes sociais em camadas](./challanges/01/video.gif)
+
+## Desafio dia 02 - Switch button <a name="day02"></a>
+
+![Switch button](./challanges/02/video.gif)

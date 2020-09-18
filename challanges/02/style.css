@@ -1,0 +1,70 @@
+:root {
+  --bg-color: #eeeeee;
+  --color-base-light: #ffffff;
+  --color-theme-success: #4ada64;
+  --color-border: #e0e0e0;
+  --button-width: 50px;
+  --button-height: calc(var(--button-width) * 0.6);
+  --border-width: 1px;
+  --color-shadow: rgba(0, 0, 0, 0.25);
+  --transition-theme: ease-in-out 0.23s;
+}
+
+*, *::before {
+  box-sizing: border-box;
+  transition: var(--transition-theme);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+}
+
+main[role="main"] {
+  background-color: var(--bg-color);
+  height: 100vh;
+  width: 100vw;
+}
+
+main[role="main"] > .main-content {
+  align-items: center;
+  display: grid;
+  gap: calc(46px + 32px);
+  grid-auto-flow: column;
+  height: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
+}
+
+main[role="main"] > .main-content > input[type="checkbox"] {
+  appearance: none;
+  background-color: var(--color-base-light);
+  border-radius: calc(var(--button-width) / 2);
+  border: solid var(--border-width) var(--color-border);
+  cursor: pointer;
+  height: var(--button-height);
+  outline: none;
+  position: relative;
+  width: var(--button-width);
+}
+
+main[role="main"] > .main-content > input[type="checkbox"]::before {
+  background-color: var(--color-base-light);
+  border-radius: 50%;
+  box-shadow: 0 2px 5px -1px var(--color-shadow);
+  content: "";
+  height: calc(var(--button-height) - (var(--border-width) * 2));
+  position: absolute;
+  width: calc(var(--button-height) - (var(--border-width) * 2));
+}
+
+main[role="main"] > .main-content > input[type="checkbox"]:checked {
+  background-color: var(--color-theme-success);
+  border-color: var(--color-theme-success);
+}
+
+main[role="main"] > .main-content > input[type="checkbox"]:checked::before {
+  transform: translateX(calc(60% + 3px));
+}
